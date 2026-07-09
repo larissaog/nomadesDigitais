@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans+Hebrew:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    font-family: "Roboto", sans-serif;
     
 }
 
@@ -8,7 +12,8 @@
     display: none;
     font-size: 35px;
     cursor: pointer;
-    margin-top: 45px;
+    margin: 0;
+    color: #fff;
 }
 
 @media (max-width:768px){
@@ -27,13 +32,14 @@
         right: -100%;
         width: 260px;
         height: 100vh;
-        background-color: #4F6D85;
+        background-color: #ffffff !important;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         padding-top: 80px;
         transition: .4s;
         z-index: 1000;
+        
     }
 
     .ul-nav.active{
@@ -43,32 +49,52 @@
     .ul-nav a{
         padding: 18px 25px;
         color: rgb(0, 0, 0) !important;
+        margin-bottom: 20px;
     }
 }
 
 @media (max-width:999px){
-     .menu-btn{
+
+    .menu-btn{
         display: block;
-        position: fixed;
-        top: 20px;
+        position: absolute; /* troque fixed por absolute */
         right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
         z-index: 1001;
     }
 
     .ul-nav{
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 260px;
-        height: 100vh;
-        background-color: #4F6D85;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding-top: 80px;
-        transition: .4s;
-        z-index: 1000;
-    }
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 260px;
+    height: calc(100vh - 80px);
+    background-color: #4F6D85;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    transition: .4s;
+    overflow-y: auto; /* Barra de rolagem vertical */
+    gap: 4px !important;
+}
+
+.ul-nav::-webkit-scrollbar{
+    width: 8px;
+}
+
+.ul-nav::-webkit-scrollbar-track{
+    background: #f0f3f5;
+}
+
+.ul-nav::-webkit-scrollbar-thumb{
+    background: #222;
+    border-radius: 10px;
+}
+
+.ul-nav::-webkit-scrollbar-thumb:hover{
+    background: #555;
+}
 
     .ul-nav.active{
         right: 0;
@@ -76,10 +102,15 @@
 
     .ul-nav a{
         padding: 18px 25px;
-        color: rgb(0, 0, 0) !important;
+        color: #000000 !important;
+        
     }
-
-
+    .ul-nav hr{
+    width: 80%;
+    margin: 0 auto;
+    border: none;
+    border-bottom: 1px solid #000;
+}
 }
 
 .ul-nav{
@@ -89,21 +120,24 @@
 }
 
 .ul-nav a{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0) !important;
     margin-top: 23px;
+ 
+
    
 }
 
 nav{
     background-color: #4F6D85;
     height: 80px;
-    
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 40px;
-}
 
+    position: relative; /* IMPORTANTE */
+}
 .logo{
      
     width: auto;
@@ -127,3 +161,45 @@ nav{
     
 }
 
+
+.linha-paises {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px; /* espaço entre a linha e as bandeiras */
+}
+
+.minha-linha {
+    flex: 1;          /* ocupa todo o espaço disponível */
+    border: none;
+    height: 2px;
+    background-color: #333;
+    margin: 0;
+}
+
+.img-paises {
+    display: flex;
+    gap: 10px;
+}
+.title-principal{
+    font-family: "Playpen Sans Hebrew", cursive !important;
+}
+
+.p-principal{
+    
+}
+
+.title2-principal{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.span1{
+    color:#c9c7c1;
+}
+
+.span2{
+    color: #000000;
+
+
+}

@@ -16,13 +16,13 @@
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <p class="d-block w-100" id="carousel-text">Site destinado a promover a cultura e a diversidade dos nomades digitais</p>
+      <p class="d-block w-100" id="carousel-text">Viagens mais organizadas.</p>
     </div>
     <div class="carousel-item">
-      <p class="d-block w-100">Site destinado a promover a cultura e a diversidade dos nomades digitais</p>
+      <p class="d-block w-100">Site numero 1 em organização de viagens.</p>
     </div>
     <div class="carousel-item">
-      <p class="d-block w-100">Site destinado a promover a cultura e a diversidade dos nomades digitais</p>
+      <p class="d-block w-100">Eurodrip`s com mais segurança financeira. </p>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -40,17 +40,19 @@
     </header>
 
     <section class="itemPrincipal">
-        
 
+        <div class="title2-principal"><h2 class="title-principal">Nomades Digitais</h2>
+        <p class="p-principal">Sonhei, <span class="span1">e agora?</span> <br> <span class="span2">Planeje seu sonhos nos minimos detalhes.</span></p></div>
 
+        <div class="linha-paises">
+            <hr class="minha-linha">
+            <div class="img-paises">
+            <img src="assets/image/flag (1).png" alt="Logo" class="logo">
+            <img src="assets/image/flag (2).png" alt="Logo" class="logo">
+            <img src="assets/image/flag.png" alt="Logo" class="logo"></div>
+            <hr class="minha-linha">
+        </div>
     </section>
-
-
-
-
-
-
-
 
        <nav>
               <img src="/assets/image/mundo.png" alt="Logo" class="logo">
@@ -61,10 +63,15 @@
 
     <ul class="ul-nav" id="menu">
         <a href="">Continentes</a>
+         <hr>
         <a href="">Conversão Monetária</a>
+         <hr>
         <a href="">Vistos e Entradas</a>
+         <hr>
         <a href="">Mapa-Mundo</a>
+         <hr>
         <a href="">Eventos</a>
+        
     </ul>
 
 </nav>
@@ -130,10 +137,10 @@ botao.addEventListener("click", () => {
     menu.classList.toggle("active");
 
     if(menu.classList.contains("active")){
-        botao.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-    }else{
-        botao.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-    }
+    botao.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+}else{
+    botao.innerHTML = '<i class="fa-solid fa-bars"></i>';
+}
 });
 </script>
 </body>
